@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MusicWave Premium</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    /* Navbar */
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #fff;
+  }
+  
+  /* Navigation Bar Styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f72585;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #f72585;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+  }
+  
+  .nav-links li a:hover::after {
+    width: 100%;
+  }
+  
+  .nav-links li a:hover {
+    color: #f72585;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .navbar {
+      justify-content: center;
+    }
+  
+    .logo {
+      font-size: 1.5rem;
+    }
+  }
+  
+
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(to bottom, #111, #000);
+    }
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #aaa;
+      margin-bottom: 40px;
+    }
+    .hero button {
+      padding: 15px 40px;
+      background-color: #f72585;
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .hero button:hover {
+      background-color: #ef63a2;
+    }
+    /* Features Section */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 60px 20px;
+      background-color: #111;
+    }
+    .feature {
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .feature:hover {
+      transform: translateY(-10px);
+    }
+    .feature h3 {
+      color: #f72585;
+      margin-bottom: 10px;
+    }
+    .feature p {
+      color: #aaa;
+      font-size: 15px;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background-color: #000;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">🎶 MusicWave</div>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="search1.html">Search</a></li>
+          <li><a href="music.html">Current-Playing</a></li>
+          <li><a href="preminum.html">Preminum</a></li>
+          <li><a href="create.html">Sign Up</a></li>
+        </ul>
+      </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h2>Upgrade to Premium</h2>
+    <p>Stream music ad-free, offline, and in the best sound quality.</p>
+    <button>Get Premium</button>
+  </div>
+
+  <!-- Features Section -->
+  <div class="features">
+    <div class="feature">
+      <h3>No Ads</h3>
+      <p>Listen without any interruptions.</p>
+    </div>
+    <div class="feature">
+      <h3>Offline Mode</h3>
+      <p>Download and enjoy music anywhere, anytime.</p>
+    </div>
+    <div class="feature">
+      <h3>High Quality</h3>
+      <p>Experience every beat in stunning clarity.</p>
+    </div>
+    <div class="feature">
+      <h3>Exclusive Content</h3>
+      <p>Get access to special releases and playlists.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 MusicWave. All rights reserved.
+  </footer>
+
+</body>
+</html>

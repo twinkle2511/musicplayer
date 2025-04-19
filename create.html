@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+
+    /* navbar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #fff;
+  }
+  
+  /* Navigation Bar Styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f72585;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #f72585;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+  }
+  
+  .nav-links li a:hover::after {
+    width: 100%;
+  }
+  
+  .nav-links li a:hover {
+    color: #f72585;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .navbar {
+      justify-content: center;
+    }
+  
+    .logo {
+      font-size: 1.5rem;
+    }
+  }
+  
+
+  .body{
+    background-image: url(https://img.freepik.com/premium-photo/abstract-113-background-wallpaper-gradient_792836-192775.jpg);
+  }
+    /* Form Container */
+    .container {
+      background-color: #1e1e1e;
+      padding: 60px;
+      border-radius: 10px;
+      width: 600px;
+      margin: 90px auto;
+      box-shadow: 0 0 20px black;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color:#f72585;
+      font-size: 200%;
+      text-shadow: 0 0 3px black;
+
+    }
+
+    input {
+      width: 100%;
+      padding: 13px;
+      margin: 13px 0;
+      background-color: #2a2a2a;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+    }
+
+    input::placeholder {
+      color: #888;
+    }
+
+    button {
+      width: 100%;
+      padding: 20px;
+      margin: 10px 0;
+      background-color: #f72585;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #f76fac;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+     /* Footer */
+     footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background-color: #000;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!--navbar-->
+  <nav class="navbar">
+    <div class="logo">🎶 MusicWave</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+          <li><a href="search1.html">Search</a></li>
+          <li><a href="music.html">Current-Playing</a></li>
+          <li><a href="preminum.html">Preminum</a></li>
+          <li><a href="create.html">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <!-- Create Account Form -->
+  <div class="container">
+    <h2>Create Account</h2>
+    <input type="text" id="username" placeholder="Username" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button onclick="createAccount()">Sign Up</button>
+    <div class="message" id="message"></div>
+  </div>
+
+   <!-- Footer -->
+   <footer>
+    &copy; 2025 MusicWave. All rights reserved.
+  </footer>
+
+  <script>
+    function createAccount() {
+      const username = document.getElementById('username').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const message = document.getElementById('message');
+
+      if (!username || !email || !password) {
+        message.style.color = 'red';
+        message.textContent = 'Please fill all fields.';
+      } else {
+        message.style.color = 'limegreen';
+        message.textContent = `Welcome, ${username}! Your account is ready 🎧`;
+      }
+    }
+  </script>
+
+
+</body>
+</html>

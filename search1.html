@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Search</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    /* Navigation Bar Styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: #1e1e1e;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #f72585;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #f72585;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links li a:hover {
+      color: #f72585;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .navbar {
+        justify-content: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* Center Wrapper */
+    .center-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+    }
+
+    .search-container {
+      width: 200%;
+      max-width: 800px;
+      margin-bottom: 40px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 14px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      background-color: #111;
+      color: #fff;
+      box-shadow: 0 0 10px #f72585;
+      transition: 0.3s;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      box-shadow: 0 0 15px #f72585;
+    }
+
+    ul#music-list {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    ul#music-list li {
+      background-color: #111;
+      margin-bottom: 10px;
+      padding: 15px 20px;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+
+    ul#music-list li:hover {
+      background-color: #1a1a1a;
+    }
+
+     /* Footer */
+     footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background-color: #000;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">🎶 MusicWave</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+          <li><a href="search1.html">Search</a></li>
+          <li><a href="music.html">Current-Playing</a></li>
+          <li><a href="preminum.html">Preminum</a></li>
+          <li><a href="create.html">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <div class="center-wrapper">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search songs or artists...">
+    </div>
+
+    <ul id="music-list">
+      <li>Lose Yourself - Eminem</li>
+      <li>Starboy - The Weeknd</li>
+      <li>Shallow - Lady Gaga & Bradley Cooper</li>
+      <li>Circles - Post Malone</li>
+      <li>Dance Monkey - Tones and I</li>
+      <li>Someone You Loved - Lewis Capaldi</li>
+      <li>Senorita - Shawn Mendes & Camila Cabello</li>
+      <li>Sunflower - Post Malone & Swae Lee</li>
+      <li>Believer - Imagine Dragons</li>
+      <li>Rockstar - DaBaby feat. Roddy Ricch</li>
+    </ul>
+  </div>
+
+    <!-- Footer -->
+  <footer>
+    &copy; 2025 MusicWave. All rights reserved.
+  </footer>
+
+
+</body>
+</html>
